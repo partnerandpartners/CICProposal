@@ -1,0 +1,170 @@
+// ****** SEARCH ******
+#search-box-wrapper {
+  position: absolute;
+  width: 100%;
+  margin-top: 6em;
+}
+
+.input-group-btn {
+  position: absolute;
+    right: 17px;
+    top: 17px;
+    button.search-button {
+      background-image: url("../img/hca-search-icon.png");
+      -webkit-appearance: none;
+      border: none;
+      height: 30px;
+      width: 30px;
+      background-size: 100%;
+    }
+}
+
+.search-section {
+  #search-input {
+    width: 100%;
+    font-size: $font-size-xl;
+    padding: 1em;
+    // line-height: 1;
+    border: solid 3px;
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+
+// ****** AUTOCOMPLETE ******
+
+// Turning off the autocomplete display to begin with
+#autocomplete {
+  display: none;
+}
+
+#search-section.active {
+  z-index: 1000;
+  background: transparent;
+}
+
+// Styles for the overlay
+#autocomplete-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.5);
+  z-index: 100;
+  display: none;
+}
+
+.bg-green {
+  #autocomplete-overlay {
+    background: $hca-bright-green;
+  }
+}
+
+.autocomplete-section {
+  margin-bottom: 1em;
+  .lower-label {
+    font-size: 22px;
+  }
+}
+
+.count {
+  text-transform: uppercase;
+  opacity: .2;
+  letter-spacing: 0.05em;
+  font-size: $font-size-base;
+  margin-bottom: 8px;
+}
+
+.tip-result {
+  margin-bottom: 8px;
+}
+
+a.tip-link {
+	font-size: $font-size-base;
+	border-bottom: 2px solid #eee;
+  padding-bottom: 3px;
+  line-height: 1.75;
+	&:hover {
+		color: $hca-blue;
+		border-bottom: 2px solid $hca-blue;
+	}
+}
+
+#autocomplete-overlay.visible {
+  display: block;
+}
+
+a.search-category-title {
+	font-size: $font-size-xl;
+	border-bottom: 2px solid #eee;
+  padding-bottom: 3px;
+  line-height: 2;
+	&:hover {
+		color: $hca-blue;
+		border-bottom: 2px solid $hca-blue;
+	}
+}
+
+.search-form {
+  position: relative;
+  z-index: 1000;
+}
+
+#autocomplete {
+  position: absolute;
+  top: 80px;
+  left: 0;
+  right: 0;
+  background: #fff;
+  height: auto;
+  z-index: 10000;
+}
+
+body.autocomplete-active #autocomplete {
+  display: block;
+  border: 3px solid;
+  padding:15px 0px 25px 0px;
+}
+
+
+@media (max-width: 480px) {
+
+  .input-group-btn {
+    position: absolute;
+      right: 10px;
+      top: 10px;
+      button.search-button {
+        background-image: url("../img/hca-search-icon.png");
+        -webkit-appearance: none;
+        border: none;
+        height: 28px;
+        width: 28px;
+        background-size: 100%;
+        &:focus {
+          outline: none;
+        }
+      }
+  }
+
+  #autocomplete {
+    top: 65px;
+  }
+
+  .search-section {
+    #search-input {
+      width: 100%;
+      font-size: 16px;
+      padding: 12px;
+      line-height: 1;
+      border: solid 3px;
+      border-radius: 0px;
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+
+}

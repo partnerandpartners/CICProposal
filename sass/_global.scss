@@ -1,0 +1,33 @@
+*,*:before,*:after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  margin: 0;
+  padding-top: 0 !important;
+  color: #000;
+  position: relative;
+}
+
+b,
+strong {
+  font-weight:  normal;
+  font-family: $font-family-serif-bold;
+  font-style: normal;
+  font-stretch: normal;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+p {
+  -webkit-margin-before: 0;
+  -webkit-margin-after : 0;
+}

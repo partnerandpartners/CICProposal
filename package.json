@@ -1,0 +1,44 @@
+{
+  "name": "housingcourtanswers",
+  "version": "2.0.0",
+  "description": "Theme for housingcourtanswers.org",
+  "main": "index.php",
+  "scripts": {
+    "gulp": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/partnerandpartners/housingcourtanswers.git"
+  },
+  "author": "Partner and Partners",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/partnerandpartners/housingcourtanswers/issues"
+  },
+  "homepage": "https://github.com/partnerandpartners/housingcourtanswers#readme",
+  "devDependencies": {
+    "animate.css": "^3.5.1",
+    "bootstrap-sass": "^3.3.7",
+    "fastclick": "^1.0.6",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-clean": "^0.3.2",
+    "gulp-concat": "^2.6.0",
+    "gulp-sass": "^2.3.2",
+    "gulp-server-livereload": "^1.8.2",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-uglify": "^1.5.3",
+    "handlebars": "^4.0.5",
+    "jquery": "^3.1.0",
+    "jquery.turbolinks": "^2.1.0",
+    "lazysizes": "^2.0.2",
+    "lodash": "^4.15.0",
+    "lunr": "~0.7.0",
+    "mousetrap": "~1.5.3",
+    "normalize.css": "^4.2.0",
+    "path": "^0.12.7",
+    "stickyfill": "^1.1.1",
+    "turbolinks": "^5.0.0",
+    "validator": "^5.0.0"
+  }
+}

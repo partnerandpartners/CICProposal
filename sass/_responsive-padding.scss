@@ -1,0 +1,56 @@
+$rsp_spacer: ceil(($font-size-base * 1.5));
+
+$rsp_spacings: 0,1,2,3,6;
+
+$rsp_breakpoints: (
+  xs: 0px,
+  sm: 480px,
+  md: 768px,
+  lg: 1024px,
+  xl: 1200px
+);
+
+$rsp_margins_and_paddings: (
+  m: margin,
+  p: padding
+);
+
+@mixin responsive_padding_margins() {
+  @each $breakpoint_prefix, $breakpoint_min_width in $rsp_breakpoints {
+    @media screen and (min-width: $breakpoint_min_width) {
+      @include generate-padding-margin-classes($breakpoint_prefix)
+    }
+  }
+}
+
+@mixin generate-padding-margin-classes($breakpoint_prefix) {
+  @each $spacing in $rsp_spacings {
+    @each $prefix, $property in $rsp_margins_and_paddings {
+      .#{$breakpoint_prefix}-#{$prefix}-a-#{$spacing} {
+        #{$property}: $spacing * $spacer !important;
+      }
+      .#{$breakpoint_prefix}-#{$prefix}-t-#{$spacing} {
+        #{$property}-top: $spacing * $spacer !important;
+      }
+      .#{$breakpoint_prefix}-#{$prefix}-r-#{$spacing} {
+        #{$property}-right: $spacing * $spacer !important;
+      }
+      .#{$breakpoint_prefix}-#{$prefix}-b-#{$spacing} {
+        #{$property}-bottom: $spacing * $spacer !important;
+      }
+      .#{$breakpoint_prefix}-#{$prefix}-l-#{$spacing} {
+        #{$property}-left: $spacing * $spacer !important;
+      }
+      .#{$breakpoint_prefix}-#{$prefix}-x-#{$spacing} {
+        #{$property}-left: $spacing * $spacer !important;
+        #{$property}-right: $spacing * $spacer !important;
+      }
+      .#{$breakpoint_prefix}-#{$prefix}-y-#{$spacing} {
+        #{$property}-top: $spacing * $spacer !important;
+        #{$property}-bottom: $spacing * $spacer !important;
+      }
+    }
+  }
+}
+
+@include responsive_padding_margins()
