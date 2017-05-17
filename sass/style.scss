@@ -2,7 +2,6 @@
 // Core variables and mixins
 @import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/variables";
 @import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins";
-
 @import "variables";
 
 // Reset and dependencies
@@ -14,28 +13,27 @@
 
 // Grid
 @import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/grid";
-
-//@import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/tables";
+@import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/tables";
 @import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/forms";
-// @import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/buttons";
+@import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/buttons";
 
 // Navs
 @import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/component-animations";
 @import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/dropdowns";
 @import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/navs";
 @import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/navbar";
-//@import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/button-groups";
-//@import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/input-groups";
-//@import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/list-group";
-//@import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/panels";
+@import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/button-groups";
+@import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/input-groups";
+@import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/list-group";
+@import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/panels";
 @import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/badges";
 @import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/responsive-embed";
 
 // Components w/ JavaScript
 @import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/modals";
 @import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/tooltip";
-// @import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/popovers";
-// @import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/carousel";
+@import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/popovers";
+@import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/carousel";
 
 // Utility classes
 @import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/utilities";
@@ -48,18 +46,12 @@
 @import "helpers";
 @import "header";
 @import "buttons";
-@import "home";
 @import "footer";
 @import "typography";
 @import "forms";
 @import "modals-popups";
-@import "search";
-@import "comments";
 @import "responsive-padding";
 
-// #main-content-container {
-// 	position: relative;
-// }
 #scroll-nav {
 	ul.sub-nav {
 		padding: 0;
@@ -98,6 +90,21 @@
 		}
 	}
 	.back-to-top { opacity: .2; padding-left: 14px; text-transform: uppercase; &:hover { opacity: 1;}}
+}
+
+.affix {
+	top: 50px;
+}
+
+.affix-bottom {
+  position: absolute;
+}
+
+.anchor {
+	display: block;
+	height: 50px;
+	margin-top: -50px;
+	visibility: hidden;
 }
 
 
