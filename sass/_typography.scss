@@ -8,13 +8,20 @@ body {
   font-size: $font-size-base;
   line-height: $line-height;
   letter-spacing: 0.0125em;
-  @media screen and (min-width: 1200px) {
-    $font-size-base: 16px;
-    font-size: $font-size-base;
+}
+
+.lead {
+  font-family: $font-family-base;
+  font-size: $font-size-xl;
+  p {
+    margin-top: 1em;
   }
-  @media screen and (min-width: 2000px) {
-    font-size: 20px;
-  }
+}
+
+figcaption {
+  font-size: $font-size-small;
+  color: $gray-light;
+  margin-top: 12px;
 }
 
 input::-webkit-input-placeholder {

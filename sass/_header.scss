@@ -1,3 +1,47 @@
-body {
-  padding-top: $navbar-height * 2;
+.navbar-brand {
+  float: left;
+  padding: 15px 15px;
+  font-size: 16px;
+  line-height: 1;
+  height: 50px;
+}
+
+.navbar {
+  border: none;
+  margin-bottom: 0px;
+  background-color: $white;
+}
+
+.navbar-default .navbar-brand {
+  color: $brand-primary;
+  font-weight: bold;
+  &:hover {
+    color: $brand-primary;
+  }
+}
+
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+  border: none;
+  background-color: $white;
+}
+
+.navbar-default .navbar-toggle {
+    border: none;
+}
+
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+    background-color: $white;
+}
+
+.navbar-toggle {
+    position: relative;
+    float: right;
+    margin-right: 0px;
+    padding: 9px 15px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    background-color: transparent;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
 }

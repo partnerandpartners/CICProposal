@@ -59,20 +59,21 @@
 		li {
 			max-width: 15em;
 			&>a {
+				color: $gray-light;
 				&:hover {
 					background-color:#fff;
-					color: $cic-blue;
+					color: $brand-primary;
 					&:before {
-						border-color: $cic-blue;
+						border-color: $gray-light;
 					}
 				}
 			}
 			&.active {
 				max-width: 15em;
-				color: $cic-blue;
+				color: $brand-primary;
 				&:before {
-					background: $cic-blue;
-					border-color: $cic-blue;
+					background: $brand-primary;
+					border-color: $brand-primary;
 				}
 			}
 			&:before {
@@ -81,7 +82,7 @@
 		    display: block;
 		    height: 12px;
 		    width: 12px;
-		    border: 2px solid #000;
+		    border: 2px solid $gray-light;
 		    left: -14px;
 		    top: 16px;
 		    border-radius: 100%;
@@ -89,11 +90,37 @@
 			}
 		}
 	}
-	.back-to-top { opacity: .2; padding-left: 14px; text-transform: uppercase; &:hover { opacity: 1;}}
+	.back-to-top { opacity: .2; padding-left: 0px; margin-left: -14px; text-transform: uppercase; &:hover { opacity: 1;}}
+}
+
+#scroll-nav ul.sub-nav li.active a {
+    color: #000;
+}
+
+.nav>li>a {
+		&:focus {
+			text-decoration: none;
+	    background-color: transparent;
+		}
+}
+
+.gradient-row-top {
+		height: 30px;
+		fill: white; /* For browsers that do not support gradients */
+	  fill: -webkit-linear-gradient(rgba(255,255,255,0), rgba(255,255,255,1)); /* For Safari 5.1 to 6.0 */
+	  fill: -o-linear-gradient(rgba(255,255,255,0), rgba(255,255,255,1)); /* For Opera 11.1 to 12.0 */
+	  fill: -moz-linear-gradient(rgba(255,255,255,0), rgba(255,255,255,1)); /* For Firefox 3.6 to 15 */
+	  fill: linear-gradient(rgba(255,255,255,0), rgba(255,255,255,1));
+		z-index: 2147483647;
+}
+
+.full {
+	padding-left: 0px;
+	padding-right: 0px;
 }
 
 .affix {
-	top: 50px;
+	top: 20px;
 }
 
 .affix-bottom {
@@ -102,11 +129,14 @@
 
 .anchor {
 	display: block;
-	height: 50px;
-	margin-top: -50px;
+	height: 0px;
+	margin-top: 0px;
 	visibility: hidden;
 }
 
+.periscope-offset {
+	margin-top: 15.4em;
+}
 
 .tenant-main-image {
 	position: relative;
@@ -144,6 +174,10 @@
 }
 
 @media (max-width: 767px) {
+
+	.periscope-offset {
+		margin-top: 0em;
+	}
 
 }
 
