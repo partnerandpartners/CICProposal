@@ -1,21 +1,21 @@
 {
-  "name": "housingcourtanswers",
+  "name": "cicproposal",
   "version": "2.0.0",
-  "description": "Theme for housingcourtanswers.org",
+  "description": "Theme for Catskills Interpretive Center Proposal",
   "main": "index.php",
   "scripts": {
     "gulp": "gulp"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/partnerandpartners/housingcourtanswers.git"
+    "url": "git+https://github.com/zachmihalko/cicproposal.git"
   },
   "author": "Partner and Partners",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/partnerandpartners/housingcourtanswers/issues"
+    "url": "https://github.com/zachmihalko/cicproposal/issues"
   },
-  "homepage": "https://github.com/partnerandpartners/housingcourtanswers#readme",
+  "homepage": "https://github.com/zachmihalko/cicproposal#readme",
   "devDependencies": {
     "animate.css": "^3.5.1",
     "bootstrap-sass": "^3.3.7",
