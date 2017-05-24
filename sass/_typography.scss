@@ -1,8 +1,3 @@
-// $font-family-sans-serif:     "Merkury Regular", -apple-system, BlinkMacSystemFont, Geneva, sans-serif;
-// $font-family-sans-serif-bold:     "Merkury Bold", -apple-system, BlinkMacSystemFont, Geneva, sans-serif;
-// $font-family-monospace:      "Merkury Mono", Menlo, Monaco, Consolas, "Courier New", monospace;
-// $font-family-base:           $font-family-sans-serif;
-
 body {
   font-family: $font-family-base;
   font-size: $font-size-base;
@@ -10,16 +5,30 @@ body {
   letter-spacing: 0.0125em;
 }
 
+h1.section-title {
+  font-size: 72px;
+  font-weight: normal;
+  line-height: 1.2;
+  margin: 0px;
+}
+
 .lead {
   font-family: $font-family-base;
-  font-size: $font-size-xl;
+  font-size: 21px;
+  letter-spacing: .5px;
   p {
     margin-top: 1em;
   }
 }
 
+.section-header {
+  font-family: $font-family-monospace;
+  font-size: 18px;
+}
+
 figcaption {
   font-size: $font-size-small;
+  font-family: $font-family-monospace;
   color: $gray-light;
   margin-top: 12px;
 }
