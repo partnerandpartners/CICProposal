@@ -52,6 +52,7 @@
 @import "modals-popups";
 @import "responsive-padding";
 @import "dropdowns";
+@import "modals";
 
 body {
 	padding-top: 50px;
@@ -61,6 +62,15 @@ body {
 		&:focus {
 			text-decoration: none;
 	    background-color: transparent;
+			outline: none;
+		}
+}
+
+.nav>li {
+		&:focus {
+			text-decoration: none;
+	    background-color: transparent;
+			outline: none;
 		}
 }
 
@@ -111,6 +121,10 @@ body {
 	padding-right: 0px;
 }
 
+.black {
+	background-color: $brand-primary;
+}
+
 .affix {
 	top: 20px;
 }
@@ -121,8 +135,8 @@ body {
 
 .anchor {
 	display: block;
-	height: 0px;
-	margin-top: 0px;
+	height: 70px;
+	margin-top: -70px;
 	visibility: hidden;
 }
 

@@ -28,3 +28,10 @@ p {
   -webkit-margin-before: 0;
   -webkit-margin-after : 0;
 }
+
+#main-content a {
+  border-bottom: 2px solid $gray-light;
+  &:hover {
+    border-bottom: 2px solid $brand-primary;
+  }
+}
