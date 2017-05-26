@@ -162,33 +162,11 @@ body {
 	}
 }
 
-.landlord-main-image {
-	position: relative;
-	top: 12px;
-	@media (max-width: 1199px) {
-		position: relative;
-		top: 16px;
-	}
-}
-
-.advocates-main-image {
-	position: relative;
-	top: 0px;
-	@media (max-width: 991px) {
-		position: relative;
-		top: 15px;
-	}
-}
-
 @media (max-width: 1024px) {
 
 }
 
 @media (max-width: 767px) {
-
-	.periscope-offset {
-		margin-top: 0em;
-	}
 
 }
 
