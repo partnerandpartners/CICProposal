@@ -53,6 +53,7 @@
 @import "responsive-padding";
 @import "dropdowns";
 @import "modals";
+@import "carousel";
 
 body {
 	padding-top: 50px;
@@ -123,6 +124,10 @@ body {
 
 .black {
 	background-color: $brand-primary;
+}
+
+.gray {
+	background-color: $gray-lightest;
 }
 
 .affix {
