@@ -49,7 +49,6 @@
 @import "footer";
 @import "typography";
 @import "forms";
-@import "modals-popups";
 @import "responsive-padding";
 @import "dropdowns";
 @import "modals";
@@ -107,16 +106,6 @@ body {
 	border: 2px solid $brand-primary;
 }
 
-.gradient-row-top {
-		height: 30px;
-		fill: white; /* For browsers that do not support gradients */
-	  fill: -webkit-linear-gradient(rgba(255,255,255,0), rgba(255,255,255,1)); /* For Safari 5.1 to 6.0 */
-	  fill: -o-linear-gradient(rgba(255,255,255,0), rgba(255,255,255,1)); /* For Opera 11.1 to 12.0 */
-	  fill: -moz-linear-gradient(rgba(255,255,255,0), rgba(255,255,255,1)); /* For Firefox 3.6 to 15 */
-	  fill: linear-gradient(rgba(255,255,255,0), rgba(255,255,255,1));
-		z-index: 2147483647;
-}
-
 .full {
 	padding-left: 0px;
 	padding-right: 0px;
@@ -149,16 +138,10 @@ body {
 	margin-top: 15.4em;
 }
 
-.tenant-main-image {
-	position: relative;
-	top: 12px;
+.main-image {
 	@media (max-width: 1199px) {
-		position: relative;
-		top: 16px;
 	}
 	@media (max-width: 991px) {
-		position: relative;
-		top: 36px;
 	}
 }
 

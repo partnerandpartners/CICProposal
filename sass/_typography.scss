@@ -21,6 +21,19 @@ h1.section-title {
   }
 }
 
+.number {
+  font-family: $font-family-base;
+  font-size: 32px;
+  height: 44px;
+  width: 44px;
+  background-color: $brand-primary;
+  color: $white;
+  display: inline-block;
+  text-align: center;
+  margin-right: 10px;
+  border-radius: 44px;
+}
+
 .section-header {
   font-family: $font-family-monospace;
   font-size: 18px;

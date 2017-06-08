@@ -26,6 +26,8 @@ gulp.task('copyJS', function () {
     './node_modules/bootstrap-sass/assets/javascripts/bootstrap/affix.js',
     './node_modules/bootstrap-sass/assets/javascripts/bootstrap/scrollspy.js',
     './node_modules/bootstrap-sass/assets/javascripts/bootstrap/carousel.js',
+    './node_modules/bootstrap-sass/assets/javascripts/bootstrap/popover.js',
+    './node_modules/bootstrap-sass/assets/javascripts/bootstrap/tooltip.js',
     './node_modules/bootstrap-sass/assets/javascripts/bootstrap/transition.js',
     './node_modules/lunr/lunr.js',
     './js/site.js',
