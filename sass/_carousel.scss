@@ -6,119 +6,16 @@
 	cursor: url("../img/arrow-right.png"), e-resize !important;
 }
 
-#slides {
-  display: none
-}
-
-.slides-container {
-  margin: 0 auto
-}
-
 .carousel-inner>.item>img, .carousel-inner>.item>a>img {
-    display: block;
+		display: block;
     max-width: auto;
     margin: auto;
-    height: 500px;
+    height: 600px;
     line-height: 1;
 }
 
 .carousel-inner {
     overflow: visible;
-}
-
-#slides .slidesjs-navigation {
-  margin-top:5px;
-}
-
-a.slidesjs-next,
-a.slidesjs-previous,
-a.slidesjs-play,
-a.slidesjs-stop {
-  display:block;
-  float: left;
-  margin-right:15px;
-  text-decoration: none;
-  color: #bababa;
-}
-
-a.slidesjs-next {
-
-}
-
-a:hover.slidesjs-next {
-  color: #000;
-  background-color: transparent;
-}
-
-a.slidesjs-previous {
-
-}
-
-a:hover.slidesjs-previous {
-  color: #000;
-  background-color: transparent;
-}
-
-a.slidesjs-play, a.slidesjs-stop {
-  font-family: 'MrEavesModSCRRegular', Geneva, Verdana, sans-serif;
-	font-weight: normal;
-	font-style: normal;
-	text-decoration: none;
-	letter-spacing: 2px;
-	font-size: 14px;
-	text-transform: lowercase;
-	margin: 0 0 0 10px;
-	line-height: 1.26;
-	text-decoration: none;
-	color: #bababa;
-}
-
-a:hover.slidesjs-play {
-  color: #000;
-  background-color: transparent;
-}
-
-a:hover.slidesjs-stop {
-  color: #000;
-  background-color: transparent;
-}
-
-.slidesjs-pagination {
-  margin: 7px 0 0;
-  float: right;
-  list-style: none;
-}
-
-.slidesjs-pagination li {
-  float: left;
-  margin: 0 5px;
-}
-
-.slidesjs-pagination li a {
-  text-decoration: none;
-  font-size: 18px;
-  padding: 0px;
-  color: $gray-light;
-  display: block;
-  float: left;
-  overflow: hidden;
-}
-
-.slidesjs-pagination li a.active,
-.slidesjs-pagination li a:hover.active {
-  color: $brand-primary;
-  background-color: transparent;
-}
-
-.slidesjs-pagination li a:hover {
-  color: $brand-primary;
-  background-color: transparent;
-}
-
-#slides a:hover,
-#slides a:active {
-  color: $brand-primary;
-  background-color: transparent;
 }
 
 .carousel-control.left {
@@ -144,7 +41,7 @@ a:hover.slidesjs-stop {
 #main-content .carousel a {
     border-bottom: none;
     &:hover {
-			border-bottom: none;
+		border-bottom: none;
 		}
 }
 
