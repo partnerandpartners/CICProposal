@@ -1,10 +1,23 @@
 const gulp = require('gulp')
 const sass = require('gulp-sass')
+const pug = require('gulp-pug')
+const rename = require('gulp-rename')
 const concat = require('gulp-concat')
 const uglify = require('gulp-uglify')
 const autoprefixer = require('gulp-autoprefixer')
 const sourcemaps = require('gulp-sourcemaps')
+
+const server = require('gulp-server-livereload')
+
 const path = require('path')
+
+gulp.task('pug', function buildHTML() {
+  return gulp.src('./*.pug')
+  .pipe(pug({
+    // Your options in here.
+  }))
+  .pipe(gulp.dest('./dist'))
+})
 
 gulp.task('sass', function () {
   return gulp.src('./sass/style.scss')
@@ -12,10 +25,11 @@ gulp.task('sass', function () {
       .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
       .pipe(autoprefixer('last 10 version'))
     .pipe(sourcemaps.write())
-    .pipe(gulp.dest('./css'))
+    .pipe(rename('style.min.css'))
+    .pipe(gulp.dest('./dist'))
 })
 
-gulp.task('copyJS', function () {
+gulp.task('js', function () {
   return gulp.src([
     './node_modules/jquery/dist/jquery.js',
     './node_modules/handlebars/dist/handlebars.min.js',
@@ -35,14 +49,30 @@ gulp.task('copyJS', function () {
   ])
     .pipe(concat('cic.min.js'))
     .pipe(uglify())
-    .pipe(gulp.dest('./js'))
+    .pipe(gulp.dest('./dist'))
 })
 
 gulp.task('watch', function () {
+  gulp.watch('./*.pug', ['pug'])
   gulp.watch('sass/**/*.scss', ['sass'])
   //gulp.watch('js/**/*.js', ['copyJS'])
 })
 
-gulp.task('build', [ 'copyJS', 'sass' ])
+gulp.task('webserver', function () {
+  gulp.src('./dist')
+    .pipe(server({
+      host: '127.0.0.1',
+      livereload: {
+        enable: true
+      },
+      directoryListing: false,
+      open: false,
+      fallback: '404.html'
+    }))
+})
 
-gulp.task('default', ['copyJS', 'sass', 'watch'])
+gulp.task('build', ['pug', 'sass', 'js'])
+
+gulp.task('develop', ['build', 'watch', 'webserver'])
+
+gulp.task('default', ['js', 'sass', 'watch'])
