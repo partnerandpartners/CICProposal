@@ -8,31 +8,30 @@ mixin carousel-caption(item)
 
 //- carousel
 mixin carousel(id,items)
-	.carousel.slide(id="carousel-" + id ,data-ride="carousel")
-		//- Indicators
-		ol.carousel-indicators
-			each item,index in items
-				if(index === 0)
-					li.active(data-target="#carousel-" + id, data-slide-to=index)
-				else
-					li(data-target="#carousel-" + id, data-slide-to=index)
+	.slideshow
+		.carousel.slide(id="carousel-" + id ,data-ride="carousel")
+			//- Wrapper for slides
+			.carousel-inner(role="listbox")
+				each item,index in items
+					if(index === 0)
+						.item.active
+							img(src=item.image)
+							+carousel-caption(item)
 
+					else
+						.item
+							img(src=item.image)
+							+carousel-caption(item)
+			//- Indicators
+			.carousel-indicators
+				each item,index in items
+					if(index === 0)
+						li.active(data-target="#carousel-" + id, data-slide-to=index)
+					else
+						li(data-target="#carousel-" + id, data-slide-to=index)
 
-		//- Wrapper for slides
-		.carousel-inner(role="listbox")
-			each item,index in items
-				if(index === 0)
-					.item.active
-						img(src=item.image)
-						+carousel-caption(item)
-
-				else
-					.item
-						img(src=item.image)
-						+carousel-caption(item)
-
-		//-  Controls
-		a.left.carousel-control(href="#carousel-" + id, role="button", data-slide="prev")
-			span.sr-only Previous
-		a.right.carousel-control(href="#carousel-" + id, role="button", data-slide="next")
-			span.sr-only Next
+			//-  Controls
+			a.left.carousel-control(href="#carousel-" + id, role="button", data-slide="prev")
+				span.sr-only Previous
+			a.right.carousel-control(href="#carousel-" + id, role="button", data-slide="next")
+				span.sr-only Next
