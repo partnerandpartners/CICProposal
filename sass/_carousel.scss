@@ -6,13 +6,13 @@
 	cursor: url("../img/arrow-right.png"), e-resize !important;
 }
 
-.carousel-inner>.item>img, .carousel-inner>.item>a>img {
-		display: block;
-    max-width: auto;
-    margin: auto;
-    height: 600px;
-    line-height: 1;
-}
+// .carousel-inner>.item>img, .carousel-inner>.item>a>img {
+// 		display: block;
+//     max-width: auto;
+//     margin: auto;
+//     height: 600px;
+//     line-height: 1;
+// }
 
 .carousel-inner {
     overflow: visible;
@@ -55,7 +55,7 @@
     width: 100%;
     margin-left: 0;
     text-align: center !important;
-    bottom: -130px;
+    bottom: -40px;
 }
 
 .carousel-indicators li {
@@ -83,18 +83,20 @@
 }
 
 .carousel-caption {
-    position: absolute;
-    left: 15%;
-    right: 15%;
-    bottom: -85px;
-    font-family: $font-family-monospace;
-    font-size: $font-size-small;
-    z-index: 30;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    color: $brand-primary;
-    text-align: center;
-    text-shadow: none;
+		position: relative;
+		width: 100%;
+		top: 40px;
+		bottom: 0;
+		left: 0;
+	  right: 0;
+		font-family: $font-family-monospace;
+		font-size: $font-size-small;
+		z-index: 30;
+		padding-top: 0;
+	  padding-bottom: 0;
+		color: $brand-primary;
+		text-align: center;
+		text-shadow: none;
 }
 
 .carousel-caption h4 {

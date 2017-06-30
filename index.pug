@@ -1,3 +1,123 @@
-html
-  body
-    div
+doctype html
+html(lang="en")
+  head
+    meta(charset="utf-8")
+    title The Future of the Catskills Interpretive Center
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    //- OPEN GRAPH
+    meta(property="og:site_name" content="The Future of the Catskills Interpretive Center")
+    //- meta(property="og:title" content=openGraphData.title)
+    //- meta(property="og:description" content=openGraphData.description)
+    //- meta(property="og:url" content=openGraphData.url)
+    //- meta(property="og:image" content=openGraphData.image)
+    //- meta(property="og:image:type" content=openGraphData.imageType)
+    //- meta(property="og:image:width" content=openGraphData.imageWidth)
+    //- meta(property="og:image:height" content=openGraphData.imageHeight)
+    include components/carousel
+    include components/modal
+    link(rel="stylesheet" type="text/css" href="style.min.css")
+    script(type="text/javascript" src="cic.min.js")
+  body.no-js.border
+    nav.navbar.navbar-default.navbar-fixed-top
+      .container-fluid
+        .navbar-header
+          button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#navbar', aria-expanded='false', aria-controls='navbar')
+            span.sr-only Toggle navigation
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          span.navbar-brand(href='#') The Future of the#[br] #[strong Catskills Interpretive Center]
+        #navbar.navbar-collapse.collapse
+          ul.nav.navbar-nav
+          ul.nav.navbar-nav.navbar-right
+            li.dropdown
+              a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-expanded='false')
+                | Ideas 
+                span.caret
+              ul.dropdown-menu(role='menu')
+                li
+                  a(href='#') Action
+                li
+                  a(href='#') Another action
+                li
+                  a(href='#') Something else here
+                li.divider
+                li.dropdown-header Nav header
+                li
+                  a(href='#') Separated link
+            li
+              a(href="" type="button" data-toggle="modal" data-target="#help") What's This
+            li
+              a(href='#get-involved') Get Involved
+            li
+              a(href="" type="button" data-toggle="modal" data-target="#donate") Donate
+    .container-fluid
+      .row.nav-padding
+        .col-xs-12
+          .row
+            .col-xs-6.no-padding.border-right-1px.border-bottom
+              img(src="img/RangerStation.png" alt="Catskill Mountain House and Lodge" width="100%" height="auto")
+            .col-xs-6.no-padding.border-left-1px.border-bottom
+              img(src="img/mountainrange.png" alt="Catskill Mountain House and Lodge" width="100%" height="auto")
+      .container-fluid
+        .row.xs-m-t-6
+          .col-xs-10.col-sm-offset-1
+            .row
+              .col-sm-4.lg-m-t-15.md-m-t-10.sm-m-t-8
+                img(src="img/mountainrange.png" alt="Catskill Mountain House and Lodge" width="100%" height="auto")
+              .col-sm-6.col-sm-offset-2
+                img(src="img/RangerStation.png" alt="Catskill Mountain House and Lodge" width="100%" height="auto")
+            .row
+              .col-sm-6.col-sm-offset-2.md-m-t-6
+                img(src="img/mountainrange.png" alt="Catskill Mountain House and Lodge" width="100%" height="auto")
+    .container-fluid
+      .row.xs-m-t-12
+        .col-xs-10.col-sm-offset-1
+          .row
+            .col-sm-4.lg-m-t-15.md-m-t-10.sm-m-t-8
+              +carousel("firstCarousel",
+              [{image:"img/mountainrange.png",h4:"Caption #1",p:"Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit."},
+              {image:"img/mountainrange.png",h4:"Caption #2",p:"Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit."},
+              {image:"img/mountainrange.png",h4:"Caption #3",p:"Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit."}])
+            .col-sm-6.col-sm-offset-2
+              img(src="img/RangerStation.png" alt="Catskill Mountain House and Lodge" width="100%" height="auto")
+          .row
+            .col-sm-6.col-sm-offset-2.md-m-t-6
+              img(src="img/mountainrange.png" alt="Catskill Mountain House and Lodge" width="100%" height="auto")
+    .container-fluid
+      .row.xs-m-t-12
+        .col-xs-10.col-sm-offset-1.border
+          .row.md-m-b-6
+            .col-sm-8
+              span Great 
+            .col-sm-4
+              +carousel("secondCarousel",
+              [{image:"img/mountainrange.png"},
+              {image:"img/mountainrange.png"},
+              {image:"img/mountainrange.png"}])
+          .row.md-m-b-6
+            .col-sm-8
+              span Great 
+            .col-sm-4
+              +carousel("thirdCarousel",
+              [{image:"img/mountainrange.png",h4:"Caption #1",p:"Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit."},
+              {image:"img/mountainrange.png"},
+              {image:"img/mountainrange.png",h4:"Caption #3",p:"Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit."}])
+  footer
+    .container-fluid
+      .row
+        .col-md-6.copyright-cred
+          span.copyright-credit
+        .col-md-6.design-credit
+          span.design-cred
+            a.footer-link(href="http://partnerandpartners.com/" target="_blank")
+  .container-fluid
+    .row
+      .col-xs-12
+        .row.xs-p-b-10.xs-p-t-3.xs-m-y-6
+          +modal("Donate","donate")
+  .container-fluid
+    .row
+      .col-xs-12
+        .row.xs-p-b-10.xs-p-t-3.xs-m-y-6
+          +modal("What's This","help")

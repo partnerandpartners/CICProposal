@@ -4,6 +4,7 @@ const pug = require('gulp-pug')
 const rename = require('gulp-rename')
 const concat = require('gulp-concat')
 const uglify = require('gulp-uglify')
+const image = require('gulp-image')
 const autoprefixer = require('gulp-autoprefixer')
 const sourcemaps = require('gulp-sourcemaps')
 
@@ -52,6 +53,23 @@ gulp.task('js', function () {
     .pipe(gulp.dest('./dist'))
 })
 
+gulp.task('image', function () {
+  gulp.src('./img/*')
+    .pipe(image({
+      pngquant: false,
+      optipng: false,
+      zopflipng: false,
+      jpegRecompress: false,
+      jpegoptim: false,
+      mozjpeg: false,
+      guetzli: false,
+      gifsicle: false,
+      svgo: false,
+      concurrent: 100
+    }))
+    .pipe(gulp.dest('./dist/img'));
+})
+
 gulp.task('watch', function () {
   gulp.watch('./*.pug', ['pug'])
   gulp.watch('sass/**/*.scss', ['sass'])
@@ -71,7 +89,7 @@ gulp.task('webserver', function () {
     }))
 })
 
-gulp.task('build', ['pug', 'sass', 'js'])
+gulp.task('build', ['pug', 'sass', 'js', 'image'])
 
 gulp.task('develop', ['build', 'watch', 'webserver'])
 
