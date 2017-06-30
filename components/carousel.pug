@@ -22,13 +22,13 @@ mixin carousel(id,items)
 						.item
 							img(src=item.image)
 							+carousel-caption(item)
-			//- Indicators
-			.carousel-indicators
-				each item,index in items
-					if(index === 0)
-						li.active(data-target="#carousel-" + id, data-slide-to=index)
-					else
-						li(data-target="#carousel-" + id, data-slide-to=index)
+				//- Indicators
+				.carousel-indicators
+					each item,index in items
+						if(index === 0)
+							li.active(data-target="#carousel-" + id, data-slide-to=index)
+						else
+							li(data-target="#carousel-" + id, data-slide-to=index)
 
 			//-  Controls
 			a.left.carousel-control(href="#carousel-" + id, role="button", data-slide="prev")

@@ -16,6 +16,7 @@
 
 .carousel-inner {
     overflow: visible;
+		position: relative;
 }
 
 .carousel-control.left {
@@ -48,14 +49,15 @@
 .carousel-indicators {
     position: absolute;
     left: 0;
-    margin-top: 10px;
+		right: 0;
+    margin-top: 0;
     z-index: 15;
     padding-left: 0;
     list-style: none;
     width: 100%;
     margin-left: 0;
     text-align: center !important;
-    bottom: 50px;
+    bottom: -25px;
 }
 
 .carousel-indicators li {
@@ -68,6 +70,10 @@
     border: none;
     cursor: pointer;
     background-color: $gray-light;
+}
+
+.carousel-indicators li:last-child {
+    margin: 0;
 }
 
 .carousel-indicators .active {
@@ -83,10 +89,9 @@
 }
 
 .carousel-caption {
-		position: relative;
+		position: absolute;
 		width: 100%;
-		top: 40px;
-		bottom: 0;
+		bottom: -130px;
 		left: 0;
 	  right: 0;
 		font-family: $font-family-monospace;
@@ -95,7 +100,7 @@
 		padding-top: 0;
 	  padding-bottom: 0;
 		color: $brand-primary;
-		text-align: center;
+		text-align: left;
 		text-shadow: none;
 }
 
