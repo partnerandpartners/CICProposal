@@ -21,6 +21,21 @@ h1.section-title {
   }
 }
 
+li {
+  font-size: 20px;
+  font-family: $font-family-monospace;
+}
+
+.list-lead {
+  font-size: 20px;
+  font-family: $font-family-monospace;
+}
+
+p.description {
+    font-family: $font-family-monospace;
+    font-size: $font-size-small;
+}
+
 blockquote {
   display: block;
   -webkit-margin-before: 0;
