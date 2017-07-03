@@ -56,23 +56,47 @@ html(lang="en")
         .col-xs-12
           .row
             .col-xs-6.no-padding.border-right-1px.border-bottom
-              img(src="img/RangerStation.png" alt="Catskill Mountain House and Lodge" width="100%" height="auto")
-            .col-xs-6.no-padding.border-left-1px.border-bottom
               img(src="img/mountainrange.png" alt="Catskill Mountain House and Lodge" width="100%" height="auto")
-      .container-fluid
-        .row.xs-m-t-6
-          .col-xs-10.col-sm-offset-1
-            .row
-              .col-sm-4.lg-m-t-15.md-m-t-10.sm-m-t-8
-                img(src="img/mountainrange.png" alt="Catskill Mountain House and Lodge" width="100%" height="auto")
-              .col-sm-6.col-sm-offset-2
-                img(src="img/RangerStation.png" alt="Catskill Mountain House and Lodge" width="100%" height="auto")
-            .row
-              .col-sm-6.col-sm-offset-2.md-m-t-6
-                img(src="img/mountainrange.png" alt="Catskill Mountain House and Lodge" width="100%" height="auto")
+            .col-xs-6.no-padding.border-left-1px.border-bottom
+              img(src="img/RangerStation.png" alt="Catskill Mountain House and Lodge" width="100%" height="auto")
+    .container-fluid
+      .row.nav-padding
+        .col-xs-12.xs-m-b-6
+          .row
+            .col-md-9
+              blockquote It’s critically important to have a place where residents and visitors can learn about our unique natural, historical, and cultural resources. It will help preserve our rich heritage, keep our local economies strong, and our quality of life intact.
+          .row
+            .col-md-12.xs-m-t-2
+              p.quote-credit Hon. Rep. Maurice D. Hinchey
+              p.quote-credit U.S. Representative, 1993 – 2013
+        .col-xs-12.xs-m-b-6
+          .row
+            .col-md-6.col-md-offset-2
+              .lead
+                p The Maurice D. Hinchey Catskill Interpretive Center is a partnership between the Catskill Center and the New York State Department of Environmental Conservation.
+                p More than just a visitors center for the Catskill Park, the reimagined Catskill Interpretive Center will act as a community Gathering Space, a Mountain House, Ranger Station, Observatory and Research Lab.
+                p Situated on 60 acres of forest, fields and wetlands in the hamlet of Mount Tremper, the center is already known to the community for its walking trails, sculpture park showcasing local Catskill artisans, picnic areas, and access to the Esopus Creek.
+              .xs-m-t-3
+              +inlinecarousel("CatskillInterpretiveCenter",
+              [{image:"img/streetsign.png",h4:"Caption #1",p:"Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit."},
+              {image:"img/TheCenter.png"},
+              {image:"img/streetsign.png",h4:"Caption #3",p:"Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit."}])
+              .lead.xs-m-t-3
+                p The redesign of the interpretive elements of the Center will further the interpretive mission of CCCD; function as a central hub for local community engagement; orient visitors to tourist sites, current attractions, outdoor activities, and seasonal offerings in the park’s communities; and educate visitors and locals alike about the area’s rich natural and cultural history while promoting the importance of stewardship, conservation, and protection of the Catskills Park.
+    .container-fluid
+      .row.xs-m-t-6
+        .col-sm-10.col-sm-offset-1
+          .row
+            .col-sm-4.lg-m-t-15.md-m-t-10.sm-m-t-8
+              img(src="img/mountainrange.png" alt="Catskill Mountain House and Lodge" width="100%" height="auto")
+            .col-sm-6.col-sm-offset-2
+              img(src="img/RangerStation.png" alt="Catskill Mountain House and Lodge" width="100%" height="auto")
+          .row
+            .col-sm-6.col-sm-offset-2.md-m-t-6
+              img(src="img/mountainrange.png" alt="Catskill Mountain House and Lodge" width="100%" height="auto")
     .container-fluid
       .row.xs-m-t-12
-        .col-xs-10.col-sm-offset-1
+        .col-sm-10.col-sm-offset-1
           .row
             .col-sm-4.lg-m-t-15.md-m-t-10.sm-m-t-8
               +carousel("firstCarousel",
@@ -86,7 +110,7 @@ html(lang="en")
               img(src="img/mountainrange.png" alt="Catskill Mountain House and Lodge" width="100%" height="auto")
     .container-fluid
       .row.xs-m-t-12
-        .col-xs-10.col-sm-offset-1.border
+        .col-sm-10.col-sm-offset-1.border
           .row.md-m-b-6
             .col-sm-8
               span Great 

@@ -35,3 +35,33 @@ mixin carousel(id,items)
 				span.sr-only Previous
 			a.right.carousel-control(href="#carousel-" + id, role="button", data-slide="next")
 				span.sr-only Next
+
+//- in-line carousel
+mixin inlinecarousel(id,items)
+	.inline-slideshow
+		.carousel.slide(id="carousel-" + id ,data-ride="carousel")
+			//- Wrapper for slides
+			.carousel-inner(role="listbox")
+				each item,index in items
+					if(index === 0)
+						.item.active
+							img(src=item.image)
+							+carousel-caption(item)
+
+					else
+						.item
+							img(src=item.image)
+							+carousel-caption(item)
+				//- Indicators
+				.carousel-indicators
+					each item,index in items
+						if(index === 0)
+							li.active(data-target="#carousel-" + id, data-slide-to=index)
+						else
+							li(data-target="#carousel-" + id, data-slide-to=index)
+
+			//-  Controls
+			a.left.carousel-control(href="#carousel-" + id, role="button", data-slide="prev")
+				span.sr-only Previous
+			a.right.carousel-control(href="#carousel-" + id, role="button", data-slide="next")
+				span.sr-only Next
