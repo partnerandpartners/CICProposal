@@ -4,13 +4,18 @@ const pug = require('gulp-pug')
 const rename = require('gulp-rename')
 const concat = require('gulp-concat')
 const uglify = require('gulp-uglify')
+const plumber = require('gulp-plumber')
 const image = require('gulp-image')
+const unusedImages = require('gulp-unused-images')
 const autoprefixer = require('gulp-autoprefixer')
 const sourcemaps = require('gulp-sourcemaps')
 
 const server = require('gulp-server-livereload')
 
 const path = require('path')
+
+var imageSource = './img',
+    imageDestination = './dist/img';
 
 gulp.task('pug', function buildHTML() {
   return gulp.src('./*.pug')
@@ -53,17 +58,29 @@ gulp.task('js', function () {
     .pipe(gulp.dest('./dist'))
 })
 
-gulp.task('image', function () {
-  gulp.src('./img/*')
+gulp.task('dev-images', function () {
+  gulp.src('./img/**/*')
+    .pipe(gulp.dest('./dist/img'));
+})
+
+gulp.task('check-unused-images', function () {
+    return gulp.src(['./img/**/*', './dist/**/*.css', './dist/*.html'])
+        .pipe(plumber())
+        .pipe(unusedImages())
+        .pipe(plumber.stop());
+});
+
+gulp.task('production-images', function () {
+  gulp.src('./img/**/*')
     .pipe(image({
-      pngquant: false,
-      optipng: false,
+      pngquant: true,
+      optipng: true,
       zopflipng: false,
-      jpegRecompress: false,
-      jpegoptim: false,
-      mozjpeg: false,
+      jpegRecompress: true,
+      jpegoptim: true,
+      mozjpeg: true,
       guetzli: false,
-      gifsicle: false,
+      gifsicle: true,
       svgo: false,
       concurrent: 100
     }))
@@ -73,6 +90,7 @@ gulp.task('image', function () {
 gulp.task('watch', function () {
   gulp.watch('./*.pug', ['pug'])
   gulp.watch('sass/**/*.scss', ['sass'])
+  gulp.watch('./img/**/*', ['dev-images'])
   //gulp.watch('js/**/*.js', ['copyJS'])
 })
 
@@ -89,8 +107,8 @@ gulp.task('webserver', function () {
     }))
 })
 
-gulp.task('build', ['pug', 'sass', 'js', 'image'])
+gulp.task('build', ['pug', 'sass', 'js', 'production-images'])
 
-gulp.task('develop', ['build', 'watch', 'webserver'])
+gulp.task('develop', ['pug', 'sass', 'js', 'dev-images', 'watch', 'webserver'])
 
 gulp.task('default', ['js', 'sass', 'watch'])

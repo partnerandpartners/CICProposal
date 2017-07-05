@@ -43,5 +43,9 @@
     "stickyfill": "^1.1.1",
     "turbolinks": "^5.0.0",
     "validator": "^5.0.0"
+  },
+  "dependencies": {
+    "gulp-plumber": "^1.1.0",
+    "gulp-unused-images": "^1.1.2"
   }
 }

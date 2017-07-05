@@ -30,23 +30,8 @@ html(lang="en")
         #navbar.navbar-collapse.collapse
           ul.nav.navbar-nav
           ul.nav.navbar-nav.navbar-right
-            li.dropdown
-              a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-expanded='false')
-                | Ideas 
-                span.caret
-              ul.dropdown-menu(role='menu')
-                li
-                  a(href='#') Action
-                li
-                  a(href='#') Another action
-                li
-                  a(href='#') Something else here
-                li.divider
-                li.dropdown-header Nav header
-                li
-                  a(href='#') Separated link
             li
-              a(href="" type="button" data-toggle="modal" data-target="#help") What's This
+              a(href="" type="button" data-toggle="modal" data-target="#help") About the Project
             li
               a(href='#get-involved') Get Involved
             li
@@ -73,11 +58,11 @@ html(lang="en")
           .row
             .col-md-6.col-md-offset-2
               .lead
-                p The Maurice D. Hinchey Catskill Interpretive Center is a partnership between the Catskill Center and the New York State Department of Environmental Conservation.
+                p The Maurice D. Hinchey Catskill Interpretive Center is a partnership between the #[a(href="http://http://catskillcenter.org//" target="_blank") Catskill Center] and the #[a(href="http://www.dec.ny.gov/" target="_blank") New York State Department of Environmental Conservation].
                 p More than just a visitors center for the Catskill Park, the reimagined Catskill Interpretive Center will act as a community Gathering Space, a Mountain House, Ranger Station, Observatory and Research Lab.
                 p Situated on 60 acres of forest, fields and wetlands in the hamlet of Mount Tremper, the center is already known to the community for its walking trails, sculpture park showcasing local Catskill artisans, picnic areas, and access to the Esopus Creek.
               .xs-m-t-3
-              +inlinecarousel("CatskillInterpretiveCenter",
+              +inlinecarousel("existing-cic",
               [{image:"img/streetsign.png",h4:"Caption #1",p:"Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit."},
               {image:"img/TheCenter.png"},
               {image:"img/streetsign.png",h4:"Caption #3",p:"Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit."}])
@@ -96,7 +81,7 @@ html(lang="en")
                   span.title Tourist Information
                   p.description The Center will provide a concierge experience that brings together practical content to assist visitors in making the most of their visit to the Catskills. This information includes local hotels and restaurants, as well as outdoor activities and cultural attractions. Augmenting this information are resources produced by the CIC. Bringing together all this content in one place will allow the CIC to serve as a hub for regional tourism – an important source of economic activity and local employment.
             .col-sm-5
-              +carousel("firstCarousel",
+              +carousel("area-tourism",
               [{image:"img/mountainrange.png"},
               {image:"img/mountainrange.png"},
               {image:"img/mountainrange.png"}])
@@ -107,8 +92,8 @@ html(lang="en")
                   span.title Outdoor Activities
                   p.description The Center will bring together and reinterpret the various ways that tourists and locals can engage with the natural Catskills environment. In addition to hiking trails, this sections covers a wide range of outdoor activities. Content in “Outdoor Activities” brings the trailhead into the CIC and gives visitors context and options for their outdoor adventures.
             .col-sm-5
-              +carousel("secondCarousel",
-              [{image:"img/mountainrange.png",h4:"Caption #1",p:"Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit."}])
+              +carousel("area-outdoor",
+                [{image:"img/mountainrange.png",h4:"Caption #1",p:"Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit."}])
           .row.md-m-b-3
             .col-sm-7
               ul
@@ -116,10 +101,10 @@ html(lang="en")
                   span.title Natural Environment
                   p.description The Center will present detailed information and resources on the ecological systems, wildlife and geology in the Catskills. This includes things like: Phenology, Animals, Native mammals and reptiles, Native birds and visiting birds, Endangered and threatened species, Plants, Ecological Zones, Geology, Watershed, Ecosystem Services, Climate Change.
             .col-sm-5
-              +carousel("thirdCarousel",
-              [{image:"img/streetsign.png"},
-              {image:"img/streetsign.png"},
-              {image:"img/TheCenter.png"}])
+              +carousel("area-natural",
+                [{image:"img/streetsign.png"},
+                {image:"img/streetsign.png"},
+                {image:"img/TheCenter.png"}])
           .row.md-m-b-6
             .col-sm-7
               ul
@@ -127,7 +112,7 @@ html(lang="en")
                   span.title Catskills Past and Present
                   p.description The Center will invite visitors to learn about the history of the Catskill region, from the indigenous Lenapehoking to the Hudson River School, to how the region is changing currently. Content will situate the present day Catskills within a centuries-long history of development, “enjoyment of natural resources,” and conservation.
             .col-sm-5
-              +carousel("fourthCarousel",
+              +carousel("area-past",
               [{image:"img/streetsign.png"},
               {image:"img/streetsign.png"},
               {image:"img/TheCenter.png"}])
@@ -137,38 +122,74 @@ html(lang="en")
           .row
             .col-md-6.col-md-offset-2
               .lead
-                p Visitors to the Catskill Interpretive Center will come away with an overview of the area’s rich natural and cultural history, discover local attractions and activities, and gain a broader sense of the importance of stewardship, conservation, and protection of the Catskills Park. 
+                p #[strong Visitors to the Catskill Interpretive Center will] come away with an overview of the area’s rich natural and cultural history, discover local attractions and activities, and gain a broader sense of the importance of stewardship, conservation, and protection of the Catskills Park. 
                 p We are reinventing the Maurice D. Hinchey Catskills Interpretive Center. Our plan for the Center includes the design of new interactive exhibits for the Center about the park, its plants, wildlife, waterways, history, culture, and people; creating a first-of-its-kind app for visitors and locals alike to learn about events in the region; repositioning the center as a ranger station and mountain house.
+            
     .container-fluid
       .row
         .col-xs-12.xs-m-y-6
           .row
             img(src="img/1848-sarahcole.jpg" alt="Catskill Mountain House and Lodge" width="100%" height="auto")
+              
+              
     .container-fluid
-      .row.xs-m-t-6
-        .col-sm-10.col-sm-offset-1
+      .row
+        .col-xs-12.xs-m-t-6
           .row
-            .col-sm-4.lg-m-t-15.md-m-t-10.sm-m-t-8
-              img(src="img/mountainrange.png" alt="Catskill Mountain House and Lodge" width="100%" height="auto")
-            .col-sm-6.col-sm-offset-2
-              img(src="img/RangerStation.png" alt="Catskill Mountain House and Lodge" width="100%" height="auto")
-          .row
-            .col-sm-6.col-sm-offset-2.md-m-t-6
-              img(src="img/mountainrange.png" alt="Catskill Mountain House and Lodge" width="100%" height="auto")
+            .col-md-6.col-md-offset-2
+              h1 Activating the Archive
+              .lead
+                p Since 1969, the Catskill Center has been protecting and fostering the environmental, cultural and economic well-being of the Catskill region. Along the way, the Center has developed an extensive archive of Park-related research materials, phenological data, oral histories, environmental curriculum, charismatic objects, art, crafts, along with books by local naturalists, botanists, geologists and conservationists.
+                p The new Interpretive Center will engage with the Center’s archive, allowing the public to experience the history of the region.
+              
+
+    //- Archival materials, showing stuff that we gathered during our research at CCCD
+    include layouts/001-activating-the-archive
+    
     .container-fluid
-      .row.xs-m-t-12
-        .col-sm-10.col-sm-offset-1
+      .row
+        .col-xs-12.xs-m-t-6
           .row
-            .col-sm-4.lg-m-t-15.md-m-t-10.sm-m-t-8
-              +carousel("firstCarousel",
-              [{image:"img/mountainrange.png",h4:"Caption #1",p:"Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit."},
-              {image:"img/mountainrange.png"},
-              {image:"img/mountainrange.png",h4:"Caption #3",p:"Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit."}])
-            .col-sm-6.col-sm-offset-2
-              img(src="img/RangerStation.png" alt="Catskill Mountain House and Lodge" width="100%" height="auto")
+            .col-md-6.col-md-offset-2
+              h1 Bringing the past to the present
+              .lead
+                p From pre-European settlement to the emergence of the Catskills as a tourist destination through the work of Hudson River School painters, the Center will also exhibit how the region is changing currently with a growth in tourism, the role of Catskills reservoirs in New York City’s water system, and threats to the region’s ecosystem through invasive species and climate change.
+                
+    //- Historical photographs of industry, the watershed, etc
+    include layouts/002-history
+    
+    
+    .container-fluid
+      .row
+        .col-xs-12.xs-m-t-6
           .row
-            .col-sm-6.col-sm-offset-2.md-m-t-6
-              img(src="img/mountainrange.png" alt="Catskill Mountain House and Lodge" width="100%" height="auto")
+            .col-md-6.col-md-offset-2
+              h1 The New Visitor Experience
+              .lead
+                p Celebrating nature and the history of tourism — Drawing on the history of tourism and hospitality in the region, the Center will provide visitors with a concierge experience that brings together practical content to assist them in making the most of their visit to the Catskills. This information includes local hotels and restaurants, as well as outdoor activities and cultural attractions. Augmenting this information are resources produced by the CIC. Bringing together all this content in one place will allow the CIC to serve as a hub for regional tourism – an important source of economic activity and local employment.
+                
+            .col-md-8.col-md-offset-1
+              .xs-m-y-6
+                +inlinecarousel("plan-views",
+                [{image:"img/streetsign.png",h4:"Caption #1",p:"Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit."},
+                {image:"img/TheCenter.png"},
+                {image:"img/streetsign.png",h4:"Caption #3",p:"Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit."}])
+                
+    //- Key experience 
+    include layouts/003-tourism-nature
+    
+    .container-fluid
+      .row
+        .col-xs-12.xs-m-t-6
+          .row
+            .col-md-6.col-md-offset-2
+              h1 Gathering and discovering
+              .lead
+                p The newly designed Catskills Interpretive Center will be a gathering place for locals and tourists alike. The Center will provide space for public events, workshops, classes, and regular naturalist-guided walks and tours will depart from the Center’s indoor trailhead.
+                
+    //- Seating area, viewfinder, maps, etc
+    include layouts/004-gathering-discovering
+
   footer
     .container-fluid
       .row
