@@ -74,3 +74,62 @@ button.back-to-top {
   width: 50%;
   cursor: e-resize;
 }
+
+
+
+
+
+span.close-modal {
+  position: relative;
+  display: block;
+  float: right;
+  margin-top: 12px;
+  margin-right: 12px;
+  width: $hamburger-width;
+  height: $hamburger-height;
+  border: $hamburger-line-width * 2 solid transparent;
+  background: transparent;
+
+  &:hover {
+    cursor: pointer;
+  }
+  span {
+    position: absolute;
+    height: $hamburger-line-width;
+
+    // Position all of the lines (we'll adjust the vertical
+    // positioning of the bottom two hamburger lines below)
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+
+    background: invert($hamburger-line-color);
+    transition: all $hamburger-animation-speed;
+    border-radius: $hamburger-line-width/2;
+  }
+
+  span:first-of-type,
+  span:last-of-type {
+    width: $hamburger-height;
+    top: 50%;
+    left: 50%;
+    right: auto;
+    margin-top: -1 * ($hamburger-line-width / 2);
+    margin-left: -1 * ($hamburger-height / 2);
+  }
+  span:first-of-type {
+    transform: rotate(45deg);
+  }
+  // Make the middle line shrink to 0% width
+  // and fade out
+  span:nth-of-type(2) {
+    opacity: 0;
+    left: 50%;
+    width: 0;
+    right: 50%;
+  }
+  span:last-of-type {
+    transform: rotate(-45deg);
+  }
+}

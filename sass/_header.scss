@@ -31,6 +31,12 @@ body {
 		}
     a {
       padding: 0 15px;
+      display: block;
+      &:hover {
+        background: #000;
+        color: #fff;
+        padding: 0 15px;
+      }
     }
     @media screen and (max-width: 768px) {
       width: 100%;
@@ -51,11 +57,6 @@ body {
       }
       a {
         display: block;
-        &:hover {
-          background: #000;
-          color: #fff;
-          padding: 0 15px;
-        }
       }
     }
 	}
@@ -73,8 +74,8 @@ a.menu-toggle {
   position: relative;
   display: block;
   float: right;
-  margin-top: 10px;
-  margin-right: 8px;
+  margin-top: 12px;
+  margin-right: 12px;
   width: $hamburger-width;
   height: $hamburger-height;
   border: $hamburger-line-width * 2 solid $hamburger-background-color;
