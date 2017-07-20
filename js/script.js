@@ -148,9 +148,8 @@
 
     scrollToTopToggle()
 
-    $(document).on('click', function(e){
+    $('button.back-to-top').on('click', function(e){
       e.preventDefault()
-
       $(document).scrollTop(0)
     })
 

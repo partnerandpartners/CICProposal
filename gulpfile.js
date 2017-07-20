@@ -82,7 +82,7 @@ gulp.task('check-unused-images', function () {
 })
 
 gulp.task('production-images', function () {
-  gulp.src('./img/**/*')
+  gulp.src('./img/**/**/*')
     .pipe(image({
       pngquant: true,
       optipng: true,
