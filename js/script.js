@@ -138,6 +138,24 @@
 
     $('#mc-embedded-subscribe-form').formchimp()
 
+    function scrollToTopToggle () {
+      if ($('body').scrollTop() > 500) {
+        $('button.back-to-top').addClass('visible')
+      } else {
+        $('button.back-to-top').removeClass('visible')
+      }
+    }
+
+    scrollToTopToggle()
+
+    $(document).on('click', function(e){
+      e.preventDefault()
+
+      $(document).scrollTop(0)
+    })
+
+    $(window).scroll(scrollToTopToggle)
+
     // Get involved contact form handler
     // $(document).on('submit', 'form#get-involved-form', function (e) {
     //   e.preventDefault()
