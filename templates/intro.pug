@@ -18,9 +18,12 @@
 
   .row
     .col-xs-12.col-md-10
-      .slick
-        div
-          img.lazyload(width="2400" height="1500" alt="" data-src="/img/intro/MauriceHincheyPic.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==")
+      .cic-slick-wrapper
+        .cic-slick-left(data-slider="#intro-slider")
+        .cic-slick-right(data-slider="#intro-slider")
+        .slick#intro-slider
+          div
+            img.lazyload(width="2400" height="1500" alt="" data-src="/img/intro/MauriceHincheyPic.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==")
 
   .row
     .col-xs-12.col-md-8

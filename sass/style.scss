@@ -52,3 +52,25 @@ button.back-to-top {
     transform: translateY(0rem);
   }
 }
+
+.cic-slick-wrapper {
+  position: relative;
+}
+.cic-slick-left,
+.cic-slick-right {
+  position: absolute;
+  top: 0;
+  z-index: 1000;
+  background: transparent;
+  bottom: 0;
+}
+.cic-slick-left {
+  left: 0;
+  width: 50%;
+  cursor: w-resize;
+}
+.cic-slick-right {
+  right: 0;
+  width: 50%;
+  cursor: e-resize;
+}

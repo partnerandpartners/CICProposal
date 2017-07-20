@@ -21,13 +21,16 @@
   .image-grid.m-xs-y-6
     .row
       .col-xs-12.col-md-4
-        .slick
-          div
-            img.lazyload(width="1149" height="861" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="" data-src="/img/gathering-past-present/gathering-past-present-row1-slideshow1.jpg")
-          div
-            img.lazyload(width="1149" height="861" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="" data-src="/img/gathering-past-present/gathering-past-present-row1-slideshow2.jpg")
-          div
-            img.lazyload(width="1149" height="861" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="" data-src="/img/gathering-past-present/gathering-past-present-row1-slideshow3.jpg")
+        .cic-slick-wrapper
+          .cic-slick-left(data-slider="#grounded-slider")
+          .cic-slick-right(data-slider="#grounded-slider")
+          .slick#grounded-slider
+            div
+              img.lazyload(width="1149" height="861" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="" data-src="/img/gathering-past-present/gathering-past-present-row1-slideshow1.jpg")
+            div
+              img.lazyload(width="1149" height="861" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="" data-src="/img/gathering-past-present/gathering-past-present-row1-slideshow2.jpg")
+            div
+              img.lazyload(width="1149" height="861" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="" data-src="/img/gathering-past-present/gathering-past-present-row1-slideshow3.jpg")
 
         img.lazyload(width="1149" height="750" alt="" data-src="/img/gathering-past-present/gathering-past-present-row-1-bottom-left.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==")
       .col-xs-12.col-md-8
