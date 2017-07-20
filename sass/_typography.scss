@@ -70,6 +70,9 @@ figcaption,
   font-family: $font-family-monospace;
   color: $gray-light;
   margin-top: 12px;
+  strong {
+  color: #000;
+  }
 }
 
 input::-webkit-input-placeholder {
