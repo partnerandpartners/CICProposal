@@ -5,7 +5,9 @@
     // Slick carousels
     $('.slick').slick({
       dots: true,
-      adaptiveHeight: false
+      adaptiveHeight: false,
+      autoplay: true,
+      arrows: false
     })
 
     // How many img tags don't have width & height?
@@ -100,22 +102,18 @@
     $(document).on('click', 'a.show-taxonomy', function (e) {
       e.preventDefault()
 
-      if ($(this).closest('.dotted').hasClass('all-active')) {
-        $(this).closest('.dotted.all-active').removeClass('all-active')
+      $(this).closest('.tax-row').toggleClass('active')
+
+      if ($(this).closest('.dotted').find('.tax-row.active').length > 0) {
+        $(this).closest('.dotted').addClass('active')
+      } else {
+        $(this).closest('.dotted').removeClass('active')
       }
 
-      if ($(this).closest('.dotted').hasClass('active')) {
-        if ($(this).closest('.tax-row').hasClass('active')) {
-          $(this).closest('.dotted').removeClass('active')
-          $(this).closest('.tax-row.active').removeClass('active')
-        } else {
-          $(this).closest('.dotted').find('.tax-row.active').removeClass('active')
-          $(this).closest('.tax-row').addClass('active')
-        }
+      if ($(this).closest('.dotted').find('.tax-row:not(.active)').length == 0) {
+        $(this).closest('.dotted').addClass('all-active')
       } else {
-        $(this).closest('.dotted').addClass('active')
-        $(this).closest('.dotted').find().removeClass('.tax-row.active').removeClass('active')
-        $(this).closest('.tax-row').addClass('active')
+        $(this).closest('.dotted').removeClass('all-active')
       }
     })
 
@@ -123,16 +121,16 @@
     $(document).on('click', 'a.show-all-taxonomies', function (e) {
       e.preventDefault()
 
-      $(this).closest('.dotted').find('.tax-row.active').removeClass('active')
-
-      if ($(this).closest('.dotted').hasClass('active')) {
+      if ($(this).closest('.dotted').hasClass('all-active')) {
+        // Close all taxonomies
+        $(this).closest('.dotted').find('.tax-row').removeClass('active')
         $(this).closest('.dotted').removeClass('active')
-      }
-
-      if (!$(this).closest('.dotted').hasClass('all-active')) {
-        $(this).closest('.dotted').addClass('all-active')
-      } else {
         $(this).closest('.dotted').removeClass('all-active')
+      } else {
+        // Open all taxonomies
+        $(this).closest('.dotted').find('.tax-row').addClass('active')
+        $(this).closest('.dotted').addClass('active')
+        $(this).closest('.dotted').addClass('all-active')
       }
     })
 
@@ -148,7 +146,7 @@
 
     scrollToTopToggle()
 
-    $('button.back-to-top').on('click', function(e){
+    $(document).on('click', 'button.back-to-top', function(e){
       e.preventDefault()
       $(document).scrollTop(0)
     })

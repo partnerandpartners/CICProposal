@@ -144,6 +144,12 @@
       background: #fff;
     }
   }
+
+  .dotted.all-active & {
+    span:nth-of-type(2) {
+      display: none;
+    }
+  }
 }
 
 .text-left {
