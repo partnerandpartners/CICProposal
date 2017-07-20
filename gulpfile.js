@@ -25,6 +25,11 @@ gulp.task('copy-cname', function () {
     .pipe(gulp.dest(destination))
 })
 
+gulp.task('copy-favicons', function () {
+  return gulp.src('./favicons/**/*')
+    .pipe(gulp.dest(destination))
+})
+
 gulp.task('sass', ['pug'], function () {
   var plugins = [
     autoprefixer({browsers: ['last 10 versions']}),
@@ -119,8 +124,8 @@ gulp.task('webserver', function () {
     }))
 })
 
-gulp.task('build', ['copy-cname', 'audio', 'pug', 'copy-slick-assets', 'sass', 'js', 'production-images'])
+gulp.task('build', ['copy-favicons', 'copy-cname', 'audio', 'pug', 'copy-slick-assets', 'sass', 'js', 'production-images'])
 
-gulp.task('develop', ['copy-cname', 'audio', 'pug', 'copy-slick-assets', 'sass', 'js', 'dev-images', 'watch', 'webserver'])
+gulp.task('develop', ['copy-favicons', 'copy-cname', 'audio', 'pug', 'copy-slick-assets', 'sass', 'js', 'dev-images', 'watch', 'webserver'])
 
 gulp.task('default', ['build'])
