@@ -170,3 +170,19 @@
     padding: 0;
   }
 }
+
+ul.no-bullets {
+  list-style-type: none;
+}
+
+.dotted ul,
+.dotted ol {
+  padding: 0;
+  margin: $spacer * 2;
+  ul,
+  ol {
+    padding-left: $spacer * 4;
+    margin: 0;
+    list-style-position: outside;//inside;
+  }
+}
