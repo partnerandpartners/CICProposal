@@ -1,4 +1,6 @@
 # Dependency directories
 .DS_Store
+/img/.DS_Store
+*/.DS_Store
 node_modules
 dist
