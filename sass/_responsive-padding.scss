@@ -26,26 +26,26 @@ $rsp_margins_and_paddings: (
 @mixin generate-padding-margin-classes($breakpoint_prefix) {
   @each $spacing in $rsp_spacings {
     @each $prefix, $property in $rsp_margins_and_paddings {
-      .#{$breakpoint_prefix}-#{$prefix}-a-#{$spacing} {
+      .#{$prefix}-#{$breakpoint_prefix}-a-#{$spacing} {
         #{$property}: $spacing * $spacer !important;
       }
-      .#{$breakpoint_prefix}-#{$prefix}-t-#{$spacing} {
+      .#{$prefix}-#{$breakpoint_prefix}-t-#{$spacing} {
         #{$property}-top: $spacing * $spacer !important;
       }
-      .#{$breakpoint_prefix}-#{$prefix}-r-#{$spacing} {
+      .#{$prefix}-#{$breakpoint_prefix}-r-#{$spacing} {
         #{$property}-right: $spacing * $spacer !important;
       }
-      .#{$breakpoint_prefix}-#{$prefix}-b-#{$spacing} {
+      .#{$prefix}-#{$breakpoint_prefix}-b-#{$spacing} {
         #{$property}-bottom: $spacing * $spacer !important;
       }
-      .#{$breakpoint_prefix}-#{$prefix}-l-#{$spacing} {
+      .#{$prefix}-#{$breakpoint_prefix}-l-#{$spacing} {
         #{$property}-left: $spacing * $spacer !important;
       }
-      .#{$breakpoint_prefix}-#{$prefix}-x-#{$spacing} {
+      .#{$prefix}-#{$breakpoint_prefix}-x-#{$spacing} {
         #{$property}-left: $spacing * $spacer !important;
         #{$property}-right: $spacing * $spacer !important;
       }
-      .#{$breakpoint_prefix}-#{$prefix}-y-#{$spacing} {
+      .#{$prefix}-#{$breakpoint_prefix}-y-#{$spacing} {
         #{$property}-top: $spacing * $spacer !important;
         #{$property}-bottom: $spacing * $spacer !important;
       }

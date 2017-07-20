@@ -1,0 +1,34 @@
+.image-grid {
+  margin-left: -15px;
+  margin-right: -15px;
+  overflow: hidden;
+  .row {
+    margin: 0;
+  }
+  [class*='col-'] {
+    padding: 0;
+  }
+  [class*='placeholder-'],
+  img {
+    border: 15px solid #fff;
+    display: block;
+    height: auto;
+    width: 100%;
+    max-width: 100%;
+  }
+  .slick {
+    border: 15px solid #fff;
+    img {
+      border: none;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    margin-left: -10px;
+    margin-right: -10px;
+    img,
+    [class*='placeholder-'],
+    .slick {
+      border: 10px solid #fff;
+    }
+  }
+}

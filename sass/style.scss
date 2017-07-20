@@ -1,50 +1,18 @@
-// BOOTSTRAP
-// Core variables and mixins
+// TOOTSTRAP
 @import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/variables";
 @import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins";
+
 @import "variables";
+@import "functions";
 
-// Reset and dependencies
+// MORE TOOTSTRAP
 @import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/normalize";
-@import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/print";
-
-// Core
 @import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/scaffolding";
-
-// Grid
 @import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/grid";
-@import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/tables";
-@import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/forms";
-@import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/buttons";
-
-// Navs
-@import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/component-animations";
-@import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/dropdowns";
-@import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/navs";
-@import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/navbar";
-@import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/button-groups";
-@import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/input-groups";
-@import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/list-group";
-@import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/panels";
-@import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/badges";
-@import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/responsive-embed";
-
-// Components w/ JavaScript
-@import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/modals";
-@import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/tooltip";
-@import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/popovers";
-@import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/carousel";
-
-// Utility classes
-@import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/utilities";
-@import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/responsive-utilities";
-
-
 
 @import "global";
 @import "mixins";
 @import "helpers";
-@import "header";
 @import "buttons";
 @import "footer";
 @import "typography";
@@ -52,118 +20,13 @@
 @import "responsive-padding";
 @import "dropdowns";
 @import "modals";
-@import "carousel";
+@import "utils";
+@import "header";
+@import "audio";
+@import "image-grid";
+@import "thematic-areas";
+@import "placeholders";
 
-body {
-	padding-top: 50px;
-}
-
-.comp-img {
-	max-width: 1280px;
-	min-width: 1280px;
-}
-
-#intro-img {
-	margin-top: 0px;
-}
-
-.nav>li>a {
-		&:focus {
-			text-decoration: none;
-	    background-color: transparent;
-			outline: none;
-		}
-}
-
-.nav>li {
-		&:focus {
-			text-decoration: none;
-	    background-color: transparent;
-			outline: none;
-		}
-}
-
-.no-padding {
-	padding: 0px !important;
-}
-
-.border-right {
-	border-right: 2px solid $brand-primary;
-}
-
-.border-right-1px {
-	border-right: 1px solid $brand-primary;
-}
-
-.border-left {
-	border-left: 2px solid $brand-primary;
-}
-
-.border-left-1px {
-	border-left: 1px solid $brand-primary;
-}
-
-.border-bottom {
-	border-bottom: 2px solid $brand-primary;
-}
-
-.border-top {
-	border-bottom: 2px solid $brand-primary;
-}
-
-.border {
-	border: 2px solid $brand-primary;
-}
-
-.full {
-	padding-left: 0px;
-	padding-right: 0px;
-}
-
-.black {
-	background-color: $brand-primary;
-}
-
-.gray {
-	background-color: $gray-lightest;
-}
-
-.affix {
-	top: 20px;
-}
-
-.affix-bottom {
-  position: absolute;
-}
-
-.anchor {
-	display: block;
-	height: 70px;
-	margin-top: -70px;
-	visibility: hidden;
-}
-
-.periscope-offset {
-	margin-top: 15.4em;
-}
-
-.main-image {
-	@media (max-width: 1199px) {
-	}
-	@media (max-width: 991px) {
-	}
-}
-
-@media (max-width: 1024px) {
-
-}
-
-@media (max-width: 767px) {
-
-}
-
-@media (max-width: 480px) {
-
-}
-
-@import "ok"
+// SLICK
+@import "../node_modules/slick-carousel/slick/slick.scss";
+@import "../node_modules/slick-carousel/slick/slick-theme.scss";

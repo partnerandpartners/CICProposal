@@ -1,0 +1,82 @@
+.dotted {
+  border: 2px dotted #000;
+  padding: 3rem;
+  &.all-active,
+  &.active {
+    background: #000;
+    color: #fff;
+    a.show-taxonomy,
+    a.show-all-taxonomies {
+      color: #fff;
+    }
+    .circle {
+      background: #fff;
+    }
+  }
+  &.all-active {
+    .not-taxonomy {
+      display: none;
+    }
+    .taxonomy {
+      display: block;
+    }
+  }
+}
+
+.taxonomy {
+  display: none;
+}
+
+a.show-taxonomy,
+a.show-all-taxonomies {
+  font-family: courier, monospace;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.dotted {
+  font-family: $font-family-monospace;
+  p {
+    font-size: $font-size-small;
+  }
+  h3 {
+    font-weight: normal;
+  }
+  .show-all-taxonomies {
+    .expand-all {display: inline;}
+    .collapse-all {display: none;}
+  }
+  &.all-active {
+    .show-all-taxonomies {
+      .expand-all {display: none;}
+      .collapse-all {display: inline;}
+    }
+  }
+
+  .show-taxonomy {
+    .show-taxonomy-text {display: inline;}
+    .hide-taxonomy-text {display: none;}
+  }
+
+  .tax-row.active .show-taxonomy {
+    .show-taxonomy-text {display: none;}
+    .hide-taxonomy-text {display: inline;}
+  }
+}
+
+.tax-row {
+  .not-taxonomy {
+    display: block;
+  }
+  .taxonomy {
+    display: none;
+  }
+  &.active {
+    .not-taxonomy {
+      display: none;
+    }
+    .taxonomy {
+      display: block;
+    }
+  }
+}

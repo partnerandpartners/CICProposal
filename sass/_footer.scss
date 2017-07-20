@@ -1,3 +1,11 @@
-footer {
-  
+#footer {
+  padding: 5rem;
+  margin-top: $spacer * 4;
+  font-size: $font-size-small;
+  color: $gray;
+  font-family: $font-family-monospace;
+  a {
+    text-decoration: underline;
+    font-weight: bold;
+  }
 }

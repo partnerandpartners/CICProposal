@@ -9,9 +9,9 @@ html {
 
 body {
   margin: 0;
-  padding-top: 0 !important;
   color: #000;
   position: relative;
+  border-top: none !important;
 }
 
 b,
@@ -27,6 +27,7 @@ img {
 p {
   -webkit-margin-before: 0;
   -webkit-margin-after : 0;
+  margin: $spacer-y * 2 0;
 }
 
 #main-content a {
@@ -34,4 +35,14 @@ p {
   &:hover {
     border-bottom: 2px solid $brand-primary;
   }
+}
+
+iframe {
+  width: 100%;
+  border: none;
+}
+
+::selection {
+  background: $selection-bg;
+  color: $selection-fg;
 }

@@ -4,75 +4,75 @@ html(lang="en")
     meta(charset="utf-8")
     title The Future of the Catskills Interpretive Center
     meta(name="viewport" content="width=device-width, initial-scale=1")
-    //- OPEN GRAPH
     meta(property="og:site_name" content="The Future of the Catskills Interpretive Center")
-    //- meta(property="og:title" content=openGraphData.title)
-    //- meta(property="og:description" content=openGraphData.description)
-    //- meta(property="og:url" content=openGraphData.url)
-    //- meta(property="og:image" content=openGraphData.image)
-    //- meta(property="og:image:type" content=openGraphData.imageType)
-    //- meta(property="og:image:width" content=openGraphData.imageWidth)
-    //- meta(property="og:image:height" content=openGraphData.imageHeight)
-    include components/carousel
-    include components/modal
     link(rel="stylesheet" type="text/css" href="style.min.css")
     script(type="text/javascript" src="cic.min.js")
-  body.no-js.border
-    nav.navbar.navbar-default.navbar-fixed-top
-      .container-fluid
-        .navbar-header
-          button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#navbar', aria-expanded='false', aria-controls='navbar')
-            span.sr-only Toggle navigation
-            span.icon-bar
-            span.icon-bar
-            span.icon-bar
-          span.navbar-brand(href='#') The Future of the#[br] #[strong Catskill Interpretive Center]
-        #navbar.navbar-collapse.collapse
-          ul.nav.navbar-nav
-          ul.nav.navbar-nav.navbar-right
-            li
-              a(href="" type="button" data-toggle="modal" data-target="#help") About the Project
-            li
-              a(href='#get-involved') Get Involved
-            li
-              a(href="" type="button" data-toggle="modal" data-target="#donate") Donate
-    .container-fluid
-      .row.nav-padding
-        .col-xs-12
-          .row
-            .col-xs-6.no-padding.border-right-1px.border-bottom
-              img(src="img/mountainrange.png" alt="Catskill Mountain House and Lodge" width="100%" height="auto")
-            .col-xs-6.no-padding.border-left-1px.border-bottom
-              img(src="img/RangerStation.png" alt="Catskill Mountain House and Lodge" width="100%" height="auto")
+  body.border
+    nav#nav
+      a.navbar-brand(href="#home") The Future of the#[br] #[strong Catskills Interpretive Center]
+      a.menu-toggle(href="#")
+        span
+        span
+        span
+      ul
+        li #[a.modal-link(href="#" data-target="#help") About the Project]
+        li #[a(href='#get-involved') Get Involved]
+        li #[a(href="https://secure.squarespace.com/commerce/donate?donatePageId=55db2928e4b0f408c8df5a20" target="_blank") Donate]
 
-    .container-fluid
-      .row
-        img(src="img/comps/cic-public-site-1.jpg" class="comp-img" id="intro-img" alt="Catskill Mountain House and Lodge" width="100%" height="auto")
-        img(src="img/comps/cic-public-site-2.jpg" class="comp-img" alt="Catskill Mountain House and Lodge" width="100%" height="auto")
-        img(src="img/comps/cic-public-site-3.jpg" class="comp-img" alt="Catskill Mountain House and Lodge" width="100%" height="auto")
-        img(src="img/comps/cic-public-site-6.jpg" class="comp-img" alt="Catskill Mountain House and Lodge" width="100%" height="auto")
-        img(src="img/comps/cic-public-site-7.jpg" class="comp-img" alt="Catskill Mountain House and Lodge" width="100%" height="auto")
-        img(src="img/comps/cic-public-site-8.jpg" class="comp-img" alt="Catskill Mountain House and Lodge" width="100%" height="auto")
-        img(src="img/comps/cic-public-site-9.jpg" class="comp-img" alt="Catskill Mountain House and Lodge" width="100%" height="auto")
-        img(src="img/comps/cic-public-site-10.jpg" class="comp-img" alt="Catskill Mountain House and Lodge" width="100%" height="auto")
-        
-        
-    footer
-      .container-fluid
+    //- include ./templates/style-guide
+
+    include ./templates/masthead
+
+    include ./templates/intro
+
+    include ./templates/establishing-studies
+
+    include ./templates/grounded-in-the-past
+
+    include ./templates/thematic-areas
+
+    include ./templates/future-for-catskill-interpretive
+
+    include ./templates/celebration-of-nature
+
+    include ./templates/tourism-exploration-discovery
+
+    include ./templates/gathering-and-observing
+
+    include ./templates/storytelling-oral-histories
+
+    include ./templates/engaging-with-nature
+
+    include ./templates/looking-ahead
+
+    include ./templates/get-involved
+
+    footer#footer
+      .container
         .row
           .col-md-6.copyright-cred
-            span.copyright-credit
-          .col-md-6.design-credit
-            span.design-cred
-              a.footer-link(href="http://partnerandpartners.com/" target="_blank")
-      script(type="text/javascript" src="cic.js")
-    .container-fluid
-      .row
-        .col-xs-12
-          .row.xs-p-b-10.xs-p-t-3.xs-m-y-6
-            +modal("Donate","donate")
-    .container-fluid
-      .row
-        .col-xs-12
-          .row.xs-p-b-10.xs-p-t-3.xs-m-y-6
-            +modal("What's This","help")
+            span.copyright-credit &copy; 2017
+          .col-md-6.design-credit.text-right
+            span.design-cred Site By #[a.footer-link(href="http://partnerandpartners.com/" target="_blank") Partner & Partners]
+
+    //- #donate.modal
+    //-   .modal-content
+    //-     header
+    //-       button.close-modal.the-x-symbol &times;
+    //-     section
+    //-       h3.modal-title Donate
+    //-     footer
+    //-       button.close-modal Close
+
+    #help.modal
+      .modal-content
+        header
+          button.close-modal.the-x-symbol &times;
+        section
+          h3.modal-title What's This
+          
+          p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        footer
+          button.close-modal Close

@@ -4,7 +4,8 @@
   "description": "Theme for Catskills Interpretive Center Proposal",
   "main": "index.pug",
   "scripts": {
-    "gulp": "gulp"
+    "build": "gulp build",
+    "develop": "gulp develop"
   },
   "repository": {
     "type": "git",
@@ -18,15 +19,18 @@
   "homepage": "https://github.com/zachmihalko/cicproposal#readme",
   "devDependencies": {
     "animate.css": "^3.5.1",
+    "autoprefixer": "^7.1.2",
     "bootstrap-sass": "^3.3.7",
+    "cssnano": "^3.10.0",
     "fastclick": "^1.0.6",
     "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^3.1.1",
     "gulp-clean": "^0.3.2",
     "gulp-concat": "^2.6.0",
-    "gulp-image": "^2.9.0",
+    "gulp-image": "^2.10.0",
     "gulp-plumber": "^1.1.0",
+    "gulp-postcss": "^7.0.0",
     "gulp-pug": "^3.3.0",
+    "gulp-purifycss": "^0.2.0",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^2.3.2",
     "gulp-server-livereload": "^1.9.2",
@@ -42,9 +46,11 @@
     "mousetrap": "~1.5.3",
     "normalize.css": "^4.2.0",
     "path": "^0.12.7",
+    "slick-carousel": "^1.6.0",
     "stickyfill": "^1.1.1",
-    "turbolinks": "^5.0.0",
     "validator": "^5.0.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "howler": "^2.0.4"
+  }
 }

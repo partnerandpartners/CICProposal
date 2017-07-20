@@ -1,28 +1,4 @@
 // Variables
-//
-// Copy settings from this file into the provided `_custom.scss` to override
-// the Bootstrap defaults without modifying key, versioned files.
-
-
-// Table of Contents
-//
-// Colors
-// Options
-// Spacing
-// Body
-// Links
-// Grid breakpoints
-// Grid containers
-// Grid columns
-// Fonts
-// Components
-
-// CUSTOM VARIABLES
-
-// General variable structure
-//
-// Variable format should follow the `$component-modifier-state-property` order.
-
 
 // Colors
 //
@@ -70,7 +46,7 @@ $enable-grid-classes:       true !default;
 // Control the default styling of most Bootstrap elements by modifying these
 // variables. Mostly focused on spacing.
 
-$spacer:                     1em !default;
+$spacer:                     1rem !default;
 $spacer-x:                   $spacer !default;
 $spacer-y:                   $spacer !default;
 $spacers: (
@@ -105,14 +81,12 @@ $spacers: (
 );
 $border-width:               3px;
 
-
 // Body
 //
 // Settings for the `<body>` element.
 
 $body-bg:                    #fff !default;
 $body-color:                 #000;
-
 
 // Links
 //
@@ -122,7 +96,6 @@ $link-color:                 $brand-primary;
 $link-decoration:            none !default;
 $link-hover-color:           inherit;
 $link-hover-decoration:      none;
-
 
 // Grid breakpoints
 //
@@ -167,26 +140,6 @@ $grid-gutter-width:          1.875em !default; // 30px
 // Typography
 //
 // Font, line-height, and color for body text, headings, and more.
-/* @import must be at top of file, otherwise CSS will not work */
-@import url("//hello.myfonts.net/count/3260b6");
-
-
-@font-face {font-family: 'GrotesqueMT-Bold';src: url('../fonts/3260B6_0_0.eot');src: url('../fonts/3260B6_0_0.eot?#iefix') format('embedded-opentype'),url('../fonts/3260B6_0_0.woff2') format('woff2'),url('../fonts/3260B6_0_0.woff') format('woff'),url('../fonts/3260B6_0_0.ttf') format('truetype');}
-
-
-@font-face {font-family: 'GrotesqueMT-Italic';src: url('../fonts/3260B6_1_0.eot');src: url('../fonts/3260B6_1_0.eot?#iefix') format('embedded-opentype'),url('../fonts/3260B6_1_0.woff2') format('woff2'),url('../fonts/3260B6_1_0.woff') format('woff'),url('../fonts/3260B6_1_0.ttf') format('truetype');}
-
-
-@font-face {font-family: 'GrotesqueMT';src: url('../fonts/3260B6_2_0.eot');src: url('../fonts/3260B6_2_0.eot?#iefix') format('embedded-opentype'),url('../fonts/3260B6_2_0.woff2') format('woff2'),url('../fonts/3260B6_2_0.woff') format('woff'),url('../fonts/3260B6_2_0.ttf') format('truetype');}
-
-
-
-@font-face {
-    font-family: 'HCA Bold';
-    src:url('../fonts/HCA-Gothic-Bold.woff2') format('woff2'),
-        url('../fonts/HCA-Gothic-Bold.woff') format('woff'),
-        url('../fonts/HCA-Gothic-Bold.ttf') format('truetype');
-}
 
 $font-family-sans-serif:     -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
 $font-family-serif:          Times, serif;
@@ -200,14 +153,14 @@ $font-size-large:         ceil(($font-size-base * 1.25)) !default; // ~18px
 $font-size-xl:            ceil(($font-size-base * 1.25)) !default; // ~18px
 $font-size-small:         ceil(($font-size-base * 0.85)) !default; // ~12px
 
-$font-size-base:          14px;
+$font-size-base:          20px;
 $font-size-md:            ceil(($font-size-base * 1.025)); // ~15px
 $font-size-lg:            ceil(($font-size-base * 1.06)); // ~16px
 $font-size-xl:            floor(($font-size-base * 1.25)); // ~18px
 $font-size-sm:            ceil(($font-size-base * .825));
 $font-size-xs:            ceil(($font-size-base * .75));
 
-$font-size-h1:            floor(($font-size-base * 4)); // ~80px
+$font-size-h1:            72px;//floor(($font-size-base * 4)); // ~80px
 $font-size-h2:            floor(($font-size-base * 3.2)); // ~45px
 $font-size-h3:            ceil(($font-size-base * 2.667)); // ~40px
 $font-size-h4:            ceil(($font-size-base * 2)); // ~30px
@@ -241,69 +194,21 @@ $nested-kbd-font-weight:      bold !default;
 
 $list-inline-padding:         5px !default;
 
-
-// Components
-//
-// Define common padding and border radius sizes and more.
-
-$line-height-lg:         (4 / 3) !default;
-$line-height-sm:         1.5 !default;
-
-$border-radius:          0;
-$border-radius-lg:       0;
-$border-radius-sm:       0;
-
-$component-active-color: #fff !default;
-$component-active-bg:    $brand-primary !default;
-
-$caret-width:            ceil(($font-size-base * .325)) !default;
-$caret-width-lg:         $caret-width !default;
-
-
-// Forms
-
-$input-padding-x:                $font-size-base;
-$input-padding-y:                ceil(($font-size-base * .5));
-
-$input-bg:                       #fff !default;
-$input-bg-disabled:              $gray-lighter !default;
-
-$input-color:                    #000;
-$input-border-color:             #000;
-$input-btn-border-width:         2px; // For form controls and buttons
-$input-box-shadow:               inset 0 1px 1px rgba(0,0,0,.075) !default;
-
-$input-border-radius:            $border-radius !default;
-$input-border-radius-lg:         $border-radius-lg !default;
-$input-border-radius-sm:         $border-radius-sm !default;
-
-$input-border-focus:             #000;
-$input-box-shadow-focus:         rgba(102,175,233,.6) !default;
-
-$input-color-placeholder:        $gray-light;
-
-$input-padding-x-sm:             ceil(($font-size-base * .75)) !default;
-$input-padding-y-sm:             ceil(($font-size-base * .285)) !default;
-
-$input-padding-x-lg:             ceil(($font-size-base * 1.25))!default;
-$input-padding-y-lg:             ceil(($font-size-base * .75)) !default;
-
-$input-height:                   (($font-size-base * $line-height) + ($input-padding-y * 2)) !default;
-$input-height-lg:                (($font-size-lg * $line-height-lg) + ($input-padding-y-lg * 2)) !default;
-$input-height-sm:                (($font-size-sm * $line-height-sm) + ($input-padding-y-sm * 2)) !default;
-
-$form-group-margin-bottom:       $spacer-y !default;
-
-$input-group-addon-bg:           $gray-lighter !default;
-$input-group-addon-border-color: $input-border-color !default;
-
-$cursor-disabled:                not-allowed !default;
-
-// Form validation icons
-$form-icon-success: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2MTIgNzkyIj48cGF0aCBmaWxsPSIjNWNiODVjIiBkPSJNMjMzLjggNjEwYy0xMy4zIDAtMjYtNi0zNC0xNi44TDkwLjUgNDQ4LjhDNzYuMyA0MzAgODAgNDAzLjMgOTguOCAzODljMTguOC0xNC4yIDQ1LjUtMTAuNCA1OS44IDguNGw3MiA5NUw0NTEuMyAyNDJjMTIuNS0yMCAzOC44LTI2LjIgNTguOC0xMy43IDIwIDEyLjQgMjYgMzguNyAxMy43IDU4LjhMMjcwIDU5MGMtNy40IDEyLTIwLjIgMTkuNC0zNC4zIDIwaC0yeiIvPjwvc3ZnPg==" !default;
-$form-icon-warning: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2MTIgNzkyIj48cGF0aCBmaWxsPSIjZjBhZDRlIiBkPSJNNjAzIDY0MC4ybC0yNzguNS01MDljLTMuOC02LjYtMTAuOC0xMC42LTE4LjUtMTAuNnMtMTQuNyA0LTE4LjUgMTAuNkw5IDY0MC4yYy0zLjcgNi41LTMuNiAxNC40LjIgMjAuOCAzLjggNi41IDEwLjggMTAuNCAxOC4zIDEwLjRoNTU3YzcuNiAwIDE0LjYtNCAxOC40LTEwLjQgMy41LTYuNCAzLjYtMTQuNCAwLTIwLjh6bS0yNjYuNC0zMGgtNjEuMlY1NDloNjEuMnY2MS4yem0wLTEwN2gtNjEuMlYzMDRoNjEuMnYxOTl6Ii8+PC9zdmc+" !default;
-$form-icon-danger: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2MTIgNzkyIj48cGF0aCBmaWxsPSIjZDk1MzRmIiBkPSJNNDQ3IDU0NC40Yy0xNC40IDE0LjQtMzcuNiAxNC40LTUyIDBsLTg5LTkyLjctODkgOTIuN2MtMTQuNSAxNC40LTM3LjcgMTQuNC01MiAwLTE0LjQtMTQuNC0xNC40LTM3LjYgMC01Mmw5Mi40LTk2LjMtOTIuNC05Ni4zYy0xNC40LTE0LjQtMTQuNC0zNy42IDAtNTJzMzcuNi0xNC4zIDUyIDBsODkgOTIuOCA4OS4yLTkyLjdjMTQuNC0xNC40IDM3LjYtMTQuNCA1MiAwIDE0LjMgMTQuNCAxNC4zIDM3LjYgMCA1MkwzNTQuNiAzOTZsOTIuNCA5Ni40YzE0LjQgMTQuNCAxNC40IDM3LjYgMCA1MnoiLz48L3N2Zz4=" !default;
-
 // CUSTOM VARIABLES
 $navbar-border-width: 1px;
 $mobile-menu-bar-dot-size: $font-size-base;
+
+$hamburger-width: 40px;
+$hamburger-height: 30px;
+$hamburger-line-width: 3px;
+$hamburger-background-color: #fff;
+$hamburger-line-color: #000;
+$hamburger-animation-speed: 150ms;
+
+$circle-size: 30px;
+$circle-plus-size: $circle-size;
+
+$navbar-height: 50px;
+
+$selection-bg: $cic-blue;
+$selection-fg: #fff;

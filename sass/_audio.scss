@@ -1,0 +1,31 @@
+$audio-player-size: 6rem;
+
+button.audio-player {
+  width: $audio-player-size;
+  height: $audio-player-size;
+  display: block;
+  padding: 0;
+  text-align: center;
+  outline: none;
+  font-size: $audio-player-size/2;
+  text-indent: .2em;
+  line-height: $audio-player-size;
+  border-radius: $audio-player-size / 2;
+  .play {
+    display: block;
+  }
+  .pause {
+    display: none;
+    transform: rotateZ(-90deg);
+    text-indent: 0;
+    font-size: $audio-player-size * .6;
+  }
+  &.playing {
+    .play {
+      display: none;
+    }
+    .pause {
+      display: block;
+    }
+  }
+}

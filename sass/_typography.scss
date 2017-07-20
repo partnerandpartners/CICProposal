@@ -5,8 +5,8 @@ body {
   letter-spacing: 0.0125em;
 }
 
-h1.section-title {
-  font-size: 72px;
+h1,
+h2 {
   font-weight: normal;
   line-height: 1.2;
   margin: 0px;
@@ -64,7 +64,8 @@ blockquote {
   font-size: 18px;
 }
 
-figcaption {
+figcaption,
+.caption {
   font-size: $font-size-small;
   font-family: $font-family-monospace;
   color: $gray-light;
@@ -100,4 +101,54 @@ input:-ms-input-placeholder {
 }
 input:focus:-ms-input-placeholder {
     opacity: .4;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  margin: 0;
+}
+
+h1,
+.h1{
+  font-size: $font-size-h1;
+  line-height: 1.1;
+  @media screen and (max-width: 768px) {
+    font-size: .8 * $font-size-h1;
+  }
+}
+h2,
+.h2{
+  font-size: $font-size-h2;
+  line-height: 1;
+  @media screen and (max-width: 768px) {
+    font-size: .7 * $font-size-h2;
+  }
+}
+h3,
+.h3{
+  font-size: $font-size-h3;
+  line-height: 1.1;
+}
+h4,
+.h4{
+  font-size: $font-size-h4;
+  line-height: 1.1;
+}
+h5,
+.h5{
+  font-size: $font-size-h5;
+  line-height: 1.1;
+}
+h6,
+.h6{
+  font-size: $font-size-h6;
+  line-height: 1.1;
+}
+
+.note {
+  font-family: $font-family-monospace;
+  font-size: 13px;
+}
+
+p {
+  margin: 3 * $spacer-y 0;
 }
