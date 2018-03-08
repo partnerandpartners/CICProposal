@@ -1,0 +1,68 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="utf-8")
+    title The Future of the Catskill Interpretive Center
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    meta(property="og:site_name" content="The Future of the Catskill Interpretive Center")
+    link(rel="stylesheet" type="text/css" href="style.min.css")
+
+    link(rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png")
+    link(rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png")
+    link(rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png")
+    link(rel="manifest" href="/manifest.json")
+    link(rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5")
+    meta(name="theme-color" content="#ffffff")
+
+    script(type="text/javascript" src="cic.min.js")
+  body.border
+    nav#nav
+      a.navbar-brand(href="#home") The Future of the#[br] #[strong Catskill Interpretive Center]
+      a.menu-toggle(href="#")
+        span
+        span
+        span
+      ul
+        li #[a.modal-link(href="#" data-target="#help") About the Project]
+        li #[a(href='#get-involved') Get Involved]
+        li #[a(href="https://secure.squarespace.com/commerce/donate?donatePageId=55db2928e4b0f408c8df5a20" target="_blank") Donate]
+
+    //- include ./templates/style-guide
+
+    //- include ./templates/watershed
+    
+    img.lazyload(width="3500" height="2790" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="" data-src="/img/WatershedWall.gif")
+    
+    footer#footer
+      .container
+        .row
+          .col-md-6.copyright-cred
+            span.copyright-credit &copy; 2017
+          .col-md-6.design-credit.text-right
+            span.design-cred Site By #[a.footer-link(href="http://partnerandpartners.com/" target="_blank") Partner & Partners]
+
+    //- #donate.modal
+    //-   .modal-content
+    //-     header
+    //-       button.close-modal.the-x-symbol &times;
+    //-     section
+    //-       h3.modal-title Donate
+    //-     footer
+    //-       button.close-modal Close
+
+    #help.modal
+      .modal-content
+        header
+          button.close-modal.the-x-symbol
+            span.close-modal
+              span
+              span
+              span
+        section
+          h3.modal-title About the Project
+          p The Future CIC project is being led by the Catskill Center for Conservation and Development and the design studio Partner &amp; Partners.
+          p Want to get involved? Scroll to the bottom of this site and fill out the form or send an email to mdhcic@catskillcenter.org.
+        footer
+          button.close-modal Close
+          
+    button.back-to-top Back To Top
